@@ -24,7 +24,7 @@ plugins {
     id("org.jetbrains.kotlin.multiplatform") version kotlinGradlePluginVersion apply false
     id("org.jetbrains.kotlin.plugin.serialization") version kotlinGradlePluginVersion apply false
     id("org.jetbrains.kotlin.plugin.compose") version kotlinGradlePluginVersion apply false
-    id("dev.zacsweers.metro") version "1.5.2" apply false
+    id("dev.zacsweers.metro") version "1.6.0" apply false
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
