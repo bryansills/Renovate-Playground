@@ -13,7 +13,7 @@ pluginManagement {
 }
 plugins {
     val androidGradlePluginVersion = "9.5.1"
-    val kotlinGradlePluginVersion = "2.4.0"
+    val kotlinGradlePluginVersion = "2.4.21"
 
     id("org.gradle.toolchains.foojay-resolver-convention") version "1.0.0"
     id("com.android.application") version androidGradlePluginVersion apply false
