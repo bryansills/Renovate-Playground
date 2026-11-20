@@ -1,31 +1,162 @@
 [versions]
-agp = "9.5.1"
-coreKtx = "1.19.1"
-junit = "4.13.2"
-junitVersion = "1.3.0"
+jvmTarget = "17"
+
+android-compileSdk = "37"
+android-targetSdk = "37"
+android-minSdk = "28"
+
+activity = "1.13.0"
+androidDesugarJdkLibs = "2.1.5"
+androidGradlePlugin = "9.5.1"
+androidx-core = "1.19.1"
+androidx-junit = "1.3.0"
+androidxLintGradle = "1.0.0"
+androidx-test-runner = "1.7.0"
+appcompat = "1.8.0"
+bugsnag = "6.28.1"
+buildconfig = "6.1.2"
+burst = "2.14.0"
+coil = "2.7.0"
+compose-bom = "2026.09.00"
+compose-multiplatform = "1.12.2"
+coroutines = "1.11.0"
+datastore = "1.3.0"
+datetime = "0.8.0-0.6.x-compat"
+dependency-analysis = "3.20.4"
+dependency-guard = "0.5.0"
+eithernet = "2.0.0"
 espressoCore = "3.7.0"
-lifecycleRuntimeKtx = "2.11.0"
-activityCompose = "1.13.0"
-kotlin = "2.2.10"
-composeBom = "2026.02.01"
+junit = "4.13.2"
+kotlin = "2.4.0"
+kotlinx-html = "0.12.0"
+kotlinx-serialization-runtime = "1.13.0"
+ktfmt = "0.65"
+lifecycle = "2.11.0"
+material = "1.14.0"
+metro = "1.5.2"
+nav3 = "1.2.1"
+okhttp = "5.5.1"
+okio = "3.18.2"
+paging = "3.5.3"
+retrofit = "3.0.0"
+sqldelight = "2.4.1"
+workmanager = "2.12.0"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
-androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
-androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
-androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
-androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
-androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
-androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
-androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
-androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+androidx-activity = { module = "androidx.activity:activity", version.ref = "activity" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity" }
+androidx-annotation = { module = "androidx.annotation:annotation", version = "1.11.0" }
+androidx-browser = { group = "androidx.browser", name = "browser", version = "1.10.0" }
+androidx-core = { module = "androidx.core:core", version.ref = "androidx-core" }
+androidx-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-fragment = { module = "androidx.fragment:fragment", version = "1.9.1" }
+androidx-lifecycle-common = { module = "androidx.lifecycle:lifecycle-common", version.ref = "lifecycle" }
+androidx-lifecycle-runtime = { module = "androidx.lifecycle:lifecycle-runtime", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+androidx-lint-gradle = { group = "androidx.lint", name = "lint-gradle", version.ref = "androidxLintGradle" }
+androidx-nav3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "nav3" }
+androidx-nav3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "nav3" }
+androidx-sqlite = { module = "androidx.sqlite:sqlite", version = "2.7.1" }
+androidx-test-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidx-test-runner" }
+androidx-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-viewmodel-core = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycle" }
+androidx-viewmodel-nav3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycle" }
+androidx-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+bugsnag = { module = "com.bugsnag:bugsnag-android", version.ref = "bugsnag" }
+bugsnag-anr = { module = "com.bugsnag:bugsnag-plugin-android-anr", version.ref = "bugsnag" }
+bugsnag-core = { module = "com.bugsnag:bugsnag-android-core", version.ref = "bugsnag" }
+bugsnag-ndk = { module = "com.bugsnag:bugsnag-plugin-android-ndk", version.ref = "bugsnag" }
+burst-coroutines = { module = "app.cash.burst:burst-coroutines", version.ref = "burst" }
+coil = { group = "io.coil-kt", name = "coil", version.ref = "coil"}
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil"}
+compose-animation = { module = "androidx.compose.animation:animation" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+compose-desktop-runtime = { module = "androidx.compose.runtime:runtime-desktop" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
+compose-icons = { group = "androidx.compose.material", name = "material-icons-core" }
+compose-lint = { module = "com.slack.lint.compose:compose-lint-checks", version = "1.6.1" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-runtime = { module = "androidx.compose.runtime:runtime" }
+compose-runtime-saveable = { module = "androidx.compose.runtime:runtime-saveable" }
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
+compose-ui-text = { module = "androidx.compose.ui:ui-text" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-unit = { module = "androidx.compose.ui:ui-unit" }
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+datastore-core = { module = "androidx.datastore:datastore-core", version.ref = "datastore"}
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore"}
+datastore-preferences-core = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore"}
+eithernet-core = { module = "com.slack.eithernet:eithernet", version.ref = "eithernet" }
+eithernet-retrofit = { module = "com.slack.eithernet:eithernet-integration-retrofit", version.ref = "eithernet" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+htmlunit = { module = "org.htmlunit:htmlunit", version = "5.7.0" }
+junit = { module = "junit:junit", version.ref = "junit" }
+jaxb3Api = { module = "jakarta.xml.bind:jakarta.xml.bind-api", version = "4.0.5" }
+jaxb3Impl = { module = "com.sun.xml.bind:jaxb-impl", version = "4.0.9" }
+kotlin-gradle-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "datetime"}
+kotlinx-html = { group = "org.jetbrains.kotlinx", name = "kotlinx-html-jvm", version.ref = "kotlinx-html" }
+kotlinx-serialization-runtime-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-core", version.ref = "kotlinx-serialization-runtime"}
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization-runtime"}
+ktfmt = { module = "org.jetbrains.kotlinx:ktfmt", version.ref = "ktfmt" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+metro-android = { module = "dev.zacsweers.metro:metrox-android", version.ref = "metro" }
+metro-runtime = { module = "dev.zacsweers.metro:runtime", version.ref = "metro" }
+metro-viewmodel = { module = "dev.zacsweers.metro:metrox-viewmodel", version.ref = "metro" }
+metro-viewmodel-compose = { module = "dev.zacsweers.metro:metrox-viewmodel-compose", version.ref = "metro" }
+mosaic = { module = "com.jakewharton.mosaic:mosaic-runtime", version = "0.18.0" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp"}
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp"}
+okio = { group = "com.squareup.okio", name = "okio", version.ref = "okio" }
+paging = { module = "androidx.paging:paging-common", version.ref = "paging" }
+paging-compose = { module = "androidx.paging:paging-compose", version.ref = "paging" }
+paging-sqldelight = { module = "app.cash.sqldelight:androidx-paging3-extensions", version.ref = "sqldelight" }
+parcelize-runtime = { module = "org.jetbrains.kotlin:kotlin-parcelize-runtime", version.ref = "kotlin" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit"}
+retrofit-kotlinx = { module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit"}
+retrofit-jaxb3 = { module = "com.squareup.retrofit2:converter-jaxb3", version.ref = "retrofit"}
+sqldelight-android-driver = { group = "app.cash.sqldelight", name = "android-driver", version.ref = "sqldelight"}
+sqldelight-async = { module = "app.cash.sqldelight:async-extensions", version.ref = "sqldelight"}
+sqldelight-jvm-driver = { group = "app.cash.sqldelight", name = "sqlite-driver", version.ref = "sqldelight"}
+sqldelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight"}
+sqldelight-sqlite-dialect = { group = "app.cash.sqldelight", name = "sqlite-3-35-dialect", version.ref = "sqldelight"}
+turbine = { module = "app.cash.turbine:turbine", version = "1.2.1" }
+workmanager = { module = "androidx.work:work-runtime", version.ref = "workmanager" }
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+android-gradlePluginApi = { group = "com.android.tools.build", name = "gradle-api", version.ref = "androidGradlePlugin" }
+buildconfig-gradlePlugin = { module = "com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin", version.ref = "buildconfig" }
+compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+dependencyAnalysis-gradlePlugin = { module = "com.autonomousapps.dependency-analysis:com.autonomousapps.dependency-analysis.gradle.plugin", version.ref = "dependency-analysis" }
+dependencyGuard-gradlePlugin = { module = "com.dropbox.dependency-guard:com.dropbox.dependency-guard.gradle.plugin", version.ref = "dependency-guard" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
+android-application = { id = "com.android.application" }
+android-library = { id = "com.android.library" }
+android-lint = { id = "com.android.lint" }
+android-multiplatformlibrary = { id = "com.android.kotlin.multiplatform.library" }
+bugsnag = { id = "com.bugsnag.gradle" }
+buildconfig = { id = "com.github.gmazzo.buildconfig" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose" }
+compose-multiplatform = { id = "org.jetbrains.compose" }
+gradle-application = { id = "org.gradle.application" }
+kotlin-assignment = { id = "org.jetbrains.kotlin.plugin.assignment" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform" }
+kotlin-samWithReceiver = { id = "org.jetbrains.kotlin.plugin.sam.with.receiver" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization" }
+metro = { id = "dev.zacsweers.metro" }
+parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize" }
